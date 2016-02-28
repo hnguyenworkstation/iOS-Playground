@@ -14,6 +14,7 @@
 		0EC487D71C838B6000D066FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC487D51C838B6000D066FC /* LaunchScreen.storyboard */; };
 		0EC487E21C838B6000D066FC /* UserLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC487E11C838B6000D066FC /* UserLoginTests.swift */; };
 		0EC487ED1C838B6000D066FC /* UserLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC487EC1C838B6000D066FC /* UserLoginUITests.swift */; };
+		0EC487FB1C839FB500D066FC /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC487FA1C839FB500D066FC /* RegisterPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0EC487E81C838B6000D066FC /* UserLoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserLoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC487EC1C838B6000D066FC /* UserLoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginUITests.swift; sourceTree = "<group>"; };
 		0EC487EE1C838B6000D066FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EC487FA1C839FB500D066FC /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				0EC487D31C838B6000D066FC /* Assets.xcassets */,
 				0EC487D51C838B6000D066FC /* LaunchScreen.storyboard */,
 				0EC487D81C838B6000D066FC /* Info.plist */,
+				0EC487FA1C839FB500D066FC /* RegisterPageViewController.swift */,
 			);
 			path = UserLogin;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				0EC487CF1C838B6000D066FC /* ViewController.swift in Sources */,
 				0EC487CD1C838B6000D066FC /* AppDelegate.swift in Sources */,
+				0EC487FB1C839FB500D066FC /* RegisterPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
