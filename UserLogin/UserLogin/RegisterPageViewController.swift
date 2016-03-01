@@ -32,7 +32,7 @@ class RegisterPageViewController: UIViewController {
         let userPasswordRepeat = txtUserPasswordRepeat.text;
         
         // Check if there is any empty field
-        if( userEmail.isEmpty || userPassword.isEmpty || userPasswordRepeat.isEmpty) {
+        if userEmail!.isEmpty || userPassword!.isEmpty || userPasswordRepeat!.isEmpty {
             // display alert message
             displayAlertMessage("There is an empty field..");
             
@@ -52,7 +52,7 @@ class RegisterPageViewController: UIViewController {
         NSUserDefaults.standardUserDefaults().synchronize();
         
         // Display confirmation
-        var myAlert = UIAlertController(title: "Confirmation", message: "Registration Sucessful!", preferredStyle: UIAlertControllerStyle.Alert);
+        let myAlert = UIAlertController(title: "Congratulations", message: "Registration Sucessful!", preferredStyle: UIAlertControllerStyle.Alert);
         let okAction = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil);
         
         myAlert.addAction(okAction);
@@ -60,8 +60,9 @@ class RegisterPageViewController: UIViewController {
         
     }
     
+    // Display alert message regarding to the passing string
     func displayAlertMessage(userMessage:String) {
-        var myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert);
+        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert);
     
         let okAction = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil);
         
@@ -70,15 +71,5 @@ class RegisterPageViewController: UIViewController {
         self.presentViewController(myAlert, animated: true, completion: nil);
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
