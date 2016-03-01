@@ -23,6 +23,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbF-vR-KQf">
+                                <rect key="frame" x="136" y="408" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="isLogoutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mT4-pq-Q2q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -115,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="152" y="618"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Page View Controller-->
         <scene sceneID="TEs-5p-oMO">
             <objects>
-                <viewController id="emS-Y2-nR0" sceneMemberID="viewController">
+                <viewController id="emS-Y2-nR0" customClass="LoginPageViewController" customModule="UserLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r31-W6-ZYE"/>
                         <viewControllerLayoutGuide type="bottom" id="68i-Y4-qqN"/>
@@ -156,18 +163,13 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOZ-c0-CQr">
-                                <rect key="frame" x="124" y="247" width="71" height="30"/>
+                                <rect key="frame" x="124" y="254" width="71" height="30"/>
                                 <color key="backgroundColor" red="0.34377838415081274" green="0.65863832820123447" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Login"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww5-PD-ycd">
-                                <rect key="frame" x="116" y="329" width="86" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.59696747757117286" blue="0.29023394449873818" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Register"/>
                                 <connections>
-                                    <segue destination="4bC-te-gwr" kind="presentation" identifier="registerViewer" id="WoR-Iz-Cbs"/>
+                                    <action selector="LoginButtonTapped:" destination="emS-Y2-nR0" eventType="touchUpInside" id="3T6-lI-skq"/>
+                                    <action selector="loginButtonTapped:" destination="emS-Y2-nR0" eventType="touchUpInside" id="OWf-cY-B8x"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFl-AE-K1j">
@@ -176,10 +178,23 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww5-PD-ycd">
+                                <rect key="frame" x="117" y="329" width="86" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.59696747757117286" blue="0.29023394449873818" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <segue destination="4bC-te-gwr" kind="presentation" identifier="registerViewer" id="WoR-Iz-Cbs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="txt_userEmail" destination="S6A-dr-by3" id="Oyv-qr-VKw"/>
+                        <outlet property="txt_userPassword" destination="ID0-ul-6sL" id="JQS-TU-i3k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoG-c5-R3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

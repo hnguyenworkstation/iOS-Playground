@@ -49,6 +49,7 @@ class RegisterPageViewController: UIViewController {
         // Get user information
         NSUserDefaults.standardUserDefaults().setObject(userEmail, forKey: "userEmail");
         NSUserDefaults.standardUserDefaults().setObject(userPassword, forKey: "userPassword");
+        
         NSUserDefaults.standardUserDefaults().synchronize();
         
         // Display confirmation
